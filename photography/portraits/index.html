@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriele Fusar Bassini</title>
+    <link rel="icon" type="image/x-icon" href="../../src/icon.ico">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../css/pictures.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body style="background-image: -webkit-linear-gradient(bottom, 
+rgba(0,0,0,265) 0%, 
+rgba(0,0,0,200) 20%,
+rgba(0,0,0,0) 80%,
+rgba(0,0,0,0) 100%
+),url('big/portraits-bg.jpg'); background-repeat: no-repeat;">
+
+<div class="photo-block">
+  <div class="section-header">
+    <h1 class="section-title">Portraits</h1>
+    <h1 class="back-button"><a href="../">< Back to photography</a></h1>
+    <p class="section-description">Alice, Cecilia and friends on the road.</p>
+  </div>
+  <div class="pictures-container">
+        <div class="row">
+            <div class="column column-big">
+              <img src="small/punk-3.jpg" data-src="big/punk-3.jpg" onclick="openModal();currentSlide(1)" class="lazy cursor zoom">
+            </div>
+            <div class="column column-big">
+              <img src="small/punk-2.jpg" data-src="big/punk-2.jpg" onclick="openModal();currentSlide(2)" class="lazy cursor zoom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="small/punk-5.jpg" data-src="small/punk-5.jpg" onclick="openModal();currentSlide(3)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+              <img src="small/punk-7.jpg" data-src="small/punk-7.jpg" onclick="openModal();currentSlide(4)" class="lazy cursor zoom">
+            </div>
+            <div class="column column-big">
+              <img src="small/punk-1.jpg" data-src="big/punk-1.jpg" onclick="openModal();currentSlide(5)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+              <img src="small/punk-4.jpg" data-src="small/punk-4.jpg" onclick="openModal();currentSlide(6)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/punk-6.jpg" data-src="small/punk-6.jpg" onclick="openModal();currentSlide(7)" class="lazy cursor zoom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-big">
+                <img src="small/snow-1.jpg" data-src="big/snow-1.jpg" onclick="openModal();currentSlide(8)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/snow-2.jpg" data-src="small/snow-2.jpg" onclick="openModal();currentSlide(9)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/snow-4.jpg" data-src="small/snow-4.jpg" onclick="openModal();currentSlide(10)" class="lazy cursor zoom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+                <img src="small/snow-3.jpg" data-src="small/snow-3.jpg" onclick="openModal();currentSlide(11)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/snow-6.jpg" data-src="small/snow-6.jpg" onclick="openModal();currentSlide(12)" class="lazy cursor zoom">
+            </div>
+            <div class="column column-big">
+                <img src="small/snow-5.jpg" data-src="big/snow-5.jpg" onclick="openModal();currentSlide(13)" class="lazy cursor zoom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column column-big">
+                <img src="small/road-1.jpg" data-src="big/road-1.jpg" onclick="openModal();currentSlide(14)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/road-2.jpg" data-src="small/road-2.jpg" onclick="openModal();currentSlide(15)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/road-3.jpg" data-src="small/road-3.jpg" onclick="openModal();currentSlide(16)" class="lazy cursor zoom">
+            </div>
+          </div>
+          <div class="row">
+            <div class="column">
+              <img src="small/misc-2.jpg" data-src="small/misc-2.jpg" onclick="openModal();currentSlide(17)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+                <img src="small/misc-3.jpg" data-src="small/misc-3.jpg" onclick="openModal();currentSlide(18)" class="lazy cursor zoom">
+            </div>
+            <div class="column">
+              <img src="small/misc-4.jpg" data-src="small/misc-4.jpg" onclick="openModal();currentSlide(19)" class="lazy cursor zoom">
+            </div>
+          </div>
+        </div>
+        <div class="padding-div"></div>
+        <div class="black-footer"></div>    
+    </div>
+
+    <div id="pic-modal" class="modal">
+        <div class="close cursor" onclick="closeModal()">&times;</div>
+        <div class="modal-content">
+      
+          <div class="slide demo">
+            <img src="small/punk-3.jpg" data-src="big/punk-3.jpg" class="lazy">
+          </div>
+      
+          <div class="slide">
+            <img src="small/punk-2.jpg" data-src="big/punk-2.jpg" class="lazy">
+          </div>
+      
+          <div class="slide">
+            <img src="small/punk-5.jpg" data-src="big/punk-5.jpg" class="lazy">
+          </div>
+          
+          <div class="slide">
+            <img src="small/punk-7.jpg" data-src="big/punk-7.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/punk-1.jpg" data-src="big/punk-1.jpg" class="lazy">
+          </div>
+      
+          <div class="slide">
+            <img src="small/punk-4.jpg" data-src="big/punk-4.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/punk-6.jpg" data-src="big/punk-6.jpg" class="lazy">
+          </div>
+          
+          <div class="slide">
+            <img src="small/snow-1.jpg" data-src="big/snow-1.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/snow-2.jpg" data-src="big/snow-2.jpg" class="lazy">
+          </div>
+      
+          <div class="slide">
+            <img src="small/snow-4.jpg" data-src="big/snow-4.jpg" class="lazy">
+          </div>
+          
+          <div class="slide">
+            <img src="small/snow-3.jpg" data-src="big/snow-3.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/snow-6.jpg" data-src="big/snow-6.jpg" class="lazy">
+          </div>
+      
+          <div class="slide">
+            <img src="small/snow-5.jpg" data-src="big/snow-5.jpg" class="lazy">
+          </div>
+          
+          <div class="slide">
+            <img src="small/road-1.jpg" data-src="big/road-1.jpg" class="lazy">
+          </div>
+          
+          <div class="slide">
+            <img src="small/road-2.jpg" data-src="big/road-2.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/road-3.jpg" data-src="big/road-3.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/misc-2.jpg" data-src="big/misc-2.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/misc-3.jpg" data-src="big/misc-3.jpg" class="lazy">
+          </div>
+
+          <div class="slide">
+            <img src="small/misc-4.jpg" data-src="big/misc-4.jpg" class="lazy">
+          </div>
+                    
+          <a class="prev zoom" onclick="plusSlides(-1)"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+          <a class="next zoom" onclick="plusSlides(1)"><span class="material-symbols-outlined">arrow_forward_ios</span></a>    
+
+        </div>
+      </div>
+      <script type="text/javascript" src="../../js/main.js"></script>
+      <script type="text/javascript" src="../../js/pictures.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabriele Fusar Bassini</title>
+    <link rel="icon" type="image/x-icon" href="../src/icon.ico">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/pictures.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <div class ="header">
+        <a class="home-link" href="../"><img class="header-icon-2" src="../src/icon.png" alt="GFB"></a>
+        
+        <label class="menu-icon" for="menu-toggle">
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+            <span class="menu-line"></span>
+          </label>
+          <input type="checkbox" id="menu-toggle">
+    
+    
+        <div class="home-menu pg-menu-wide"><br>
+            <!--<h2 class="wide-menu-label"><a href="../cv">CV</a></h2>!-->
+            <h2 class="wide-menu-label selected"><a href="../webdev">Web Developement</a></h2>
+            <h2 class="wide-menu-label"><a href="../video">Videomaking</a></h2>
+            <h2 class="wide-menu-label"><a href="../design">Graphic Design</a></h2>
+            <h2 class="wide-menu-label"><a href="../photography">Photography</a></h2>
+            <!--<h2 class="wide-menu-label"><a href="../music">Music</a></h2>!-->
+        </div>
+        <div id="pg-menu-small" class="home-menu pg-menu-small"><br>
+            <!--<h1 class="menu-label menu-big"><a href="../cv">Curriculum Vitae</a></h1>!-->
+            <h1 class="menu-label menu-big"><a href="../webdev">Web Developement</a></h1>
+            <h1 class="menu-label menu-big"><a href="../video">Videomaking</a></h1>
+            <h1 class="menu-label menu-big"><a href="../design">Graphic Design</a></h1>
+            <h1 class="menu-label menu-big"><a href="../photography">Photography</a></h1>
+            <!--<h1 class="menu-label menu-big"><a href="../music">Music</a></h1>!-->
+        </div>
+    </div>
+    <!--<div class="main-container">!-->
+    <div class="web-container minds zoom">
+        <img src="minds/minds-1.png" onclick="openModal();currentSlide(1)" class="cursor">
+        <div class="web-description">
+            <h3>Minds</h3>
+            <p>A futuristic-themed streaming website to host multiple-choice movies. The website implements a psychological test in order to cluster people and choose better stories for each group. Vanilla, jquery, php. Completely custom graphics and icons.</p>
+            <a href="https://roadtominds.altervista.org/about.php" target="_blank"><p class="visit">Visit at roadtominds.altervista.org/about.php</p></a>
+        </div>
+    </div>
+
+    <div class="web-container virtus zoom">
+        <img src="virtus/virtus-1.png" onclick="openModal();currentSlide(4)" class="cursor">
+        <div class="web-description">
+            <h3>Nuova Virtus Crema</h3>
+            <p>Sports team official website. Main features: a yearbook where athletes can personally choose their pictures an exploit automatic background removal through API, automatic update of the race results and team rankings using a web scraper, automatic creation of athletes pages with statistics and plots. Hosted on Wordpress. php, MySql, JS. </p>
+            <a href="https://nuovavirtuscrema.it/annuario" target="_blank"><p class="visit">Visit at nuovavirtuscrema.it/annuario</p></a>
+        </div>
+    </div>
+
+    <div class="web-container tedx zoom">
+        <img src="tedx/tedx-1.png" onclick="openModal();currentSlide(7)" class="cursor">
+        <div class="web-description">
+            <h3>TEDxLungarnoMediceo</h3>
+            <p>I took part in shaping a TEDx event website mainly by delivering graphic designs. Hosted on Wordpress.</p>
+            <a href="https://tedxlungarnomediceo.com" target="_blank"><p class="visit">Visit at tedxlungarnomediceo.com</p></a>
+        </div>
+    </div>
+
+    <!--</div>-->
+
+    <div id="pic-modal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+      
+          <div class="slide demo">
+            <img src="minds/minds-1.png">
+          </div>
+      
+          <div class="slide">
+            <img src="minds/minds-2.png">
+          </div>
+      
+          <div class="slide">
+            <img src="minds/minds-3.png">
+          </div>
+          
+          <div class="slide demo">
+            <img src="virtus/virtus-1.png">
+          </div>
+      
+          <div class="slide">
+            <img src="virtus/virtus-2.png">
+          </div>
+      
+          <div class="slide">
+            <img src="virtus/virtus-3.png">
+          </div>
+
+          <div class="slide demo">
+            <img src="tedx/tedx-1.png">
+          </div>
+      
+          <div class="slide">
+            <img src="tedx/tedx-2.png">
+          </div>
+      
+          <div class="slide">
+            <img src="tedx/tedx-3.png">
+          </div>
+          <a class="prev zoom" onclick="plusSlides(-1)"><span class="material-symbols-outlined">arrow_back_ios</span></a>
+          <a class="next zoom" onclick="plusSlides(1)"><span class="material-symbols-outlined">arrow_forward_ios</span></a>    
+
+        </div>
+     </div>
+    <script type="text/javascript" src="../js/main.js"></script>
+    <script type="text/javascript" src="../js/menu.js"></script>
+    <script type="text/javascript" src="../js/pictures.js"></script>
+    <script type="text/javascript">const arrow_timeout = setTimeout(showMaterial, 50);</script>
+</body>
+</html>
