@@ -192,6 +192,19 @@ h2{
     padding: 1%;
 }
 
+.cv-pic{
+  width:200px;
+  display: inline;
+}
+
+.resume-section h2{
+  color: #6ca19c;
+}
+
+.resume-section p{
+  padding: 10px;
+}
+
 .video-bg{
     width: 80vw;
     max-width: 1080px;
