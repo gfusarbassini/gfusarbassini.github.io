@@ -307,11 +307,12 @@ h2{
 }
 
 .social-links {
+    background-color: blue;
     position: absolute;
     width: 100%;
     z-index: 1;
     left: 12vw;
-    bottom: 60px;
+    top: 80vh;
     color: #6ca19c;
     font-size: 20px;
   }
