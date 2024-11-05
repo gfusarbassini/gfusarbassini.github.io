@@ -18,8 +18,16 @@
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+}
+
+.banner-text {
+  color: white;
+  font-size: 2.5vh;
+  margin-bottom: 1rem;
 }
 
 .youtube-button {
@@ -33,12 +41,27 @@
   cursor: pointer;
   transition: all 0.3s ease;
   text-decoration: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.play-icon {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 8px 0 8px 12px;
+  border-color: transparent transparent transparent white;
+  transition: all 0.3s ease;
 }
 
 .youtube-button:hover {
   background-color: white;
   color: #ff0000;
+}
+
+.youtube-button:hover .play-icon {
+  border-color: transparent transparent transparent #ff0000;
 }
 
 @keyframes gradient {
@@ -86,7 +109,11 @@
     </div>
     <!--<div class="main-container">!-->
     <div class="youtube-banner">
-        <a href="https://www.youtube.com/playlist?list=PLNw5s42ujTHJOOeomFKL8rTNs4-zMBxwW" class="youtube-button">Motion Design</a>
+        <div class="banner-text">Motion Graphics, Infographics and Introductions</div>
+        <a href="https://www.youtube.com/playlist?list=PLNw5s42ujTHJOOeomFKL8rTNs4-zMBxwW" class="youtube-button">
+          <div class="play-icon"></div>
+          YouTube
+        </a>
     </div>
     <section>
         <header>
