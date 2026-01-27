@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <title>Aeon Agon - World Athletics</title>
+  <link rel="stylesheet" href="../../css/global.css">
+</head>
+<body>
+  <div class="custom-cursor"></div>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    <a href="../.." class="breadcrumb-link interactable">gabrielefusarbassini</a><a href="../" class="breadcrumb-link interactable">/works</a>/aeon-agon
+  </div>
+
+  <!-- CONTENT -->
+  <div class="container">
+    <div class="left">
+      <div class="header initial-hidden" id="main-header">
+        <span>AEON AGON</span>
+        <img src="../../media/ball.webp" alt="logo" class="logo">
+        <span class="client">WORLD ATHLETICS</span>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+      </div>
+      <div class="page-content">
+      <div class="tags initial-hidden">
+        <div class="tag interactable">Art Direction</div>
+        <div class="tag interactable">Graphic Design</div>
+        <div class="tag interactable">Web Design & Dev</div>
+        <div class="tag interactable">Motion Graphics</div>
+      </div>
+      <div class="img-block interactable initial-hidden">
+          <div class="hover-video">
+            <iframe 
+              src="https://www.youtube.com/embed/pfPH8GUPKuY?si=8puwYuJyHLC9v2Bd" 
+              title="World Athletics Aeon Agon | Trailer"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      
+      <div class="gallery-wrapper initial-hidden">
+        <button class="mobile-nav m-prev" onclick="sideScroll(this, -1)">‹</button>
+        <div class="gallery-row campaign-gallery">
+          <div class="img-block interactable"><img src="../../Media/aeonagon-mood-1.webp"></div>
+          <div class="img-block interactable"><img src="../../Media/aeonagon-mood-2.webp"></div>
+          <div class="img-block interactable"><img src="../../Media/aeonagon-mood-3.webp"></div>
+          <div class="img-block interactable"><img src="../../Media/aeonagon-mood-5.webp"></div>
+          <div class="img-block interactable"><img src="../../Media/aeonagon-mood-6.webp"></div>
+        </div>
+        <button class="mobile-nav m-next" onclick="sideScroll(this, 1)">›</button>
+      </div>
+    </div>
+    </div>
+    <div class="middle">
+      <div class="idea-header-group initial-hidden">
+        <div class="header" style="margin:0"><span>THE IDEA</span></div>
+        <div class="color-palette">
+          <div class="color-swatch" style="background-color: #B180FF;"></div>
+          <div class="color-swatch" style="background-color: #FF7A3D;"></div>
+          <div class="color-swatch" style="background-color: #000000;"></div>
+          <div class="color-swatch" style="background-color: #8FFF7A;"></div>
+          <div class="color-swatch" style="background-color: #5AC9E6;"></div>
+        </div>
+      </div>
+      <div class="page-content-middle">
+      <div class="text-block initial-hidden">
+        In May 2024, I was selected by World
+Athletics for the 2024 Content Creator
+Programme, alongside three other
+international creators. Each of us
+developed a project or format on social
+media to promote the sport and key
+competitions in the context of the
+Olympics and World Championships. I
+created Aeon Agon, an interactive
+alternate reality story (ARG): a sci-fi
+virtual treasure hunt with a final prize. The challenge was
+to modernize ARGs in order to engage
+a new niche audience with storytelling.
+Through a more visual and cinematic
+approach, as well as the development
+of a strong branding identity, Aeon
+Agon created a small universe that
+captured the curiosity and appreciation
+of the audience.      </div>
+
+<div class="gallery-row idea-gallery initial-hidden">
+  <div class="ig-block">
+    <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFFc0XCtt4d/embed" frameborder="0" ></iframe>
+  </div>
+  <div class="ig-block">
+    <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFKmhi5CJAd/embed" frameborder="0" style="margin-left:-50%"></iframe>
+  </div>
+  <div class="ig-block">
+    <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFFdoxAN04n/embed" frameborder="0" style="margin-left:-100%"></iframe>
+  </div>
+</div>
+
+      
+    </div>
+
+    <div class="right-menu-panel" id="menu-container"></div>
+  </div>
+
+  <!-- MODAL -->
+  <div id="imageModal">
+    <button id="modalClose" class="interactable">✕</button>
+    <button id="prevBtn" class="modal-nav interactable">‹</button>
+    <button id="nextBtn" class="modal-nav interactable">›</button>
+    <img id="modalImg" src="">
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="../../js/global.js"></script>
+  <script async src="//www.instagram.com/embed.js"></script>
+</body>
+</html>
