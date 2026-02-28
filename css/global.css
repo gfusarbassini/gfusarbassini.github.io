@@ -417,14 +417,133 @@ body.no-scroll {
   margin-bottom: 0;
 }
 
+/* ============================================
+   REEL SHOWCASE (High-End UX)
+   ============================================ */
+.idea-gallery {
+  display: flex !important;
+  gap: 15px;
+  padding: 20px 0;
+  flex-wrap: nowrap;
+  /* Keep them affiancati */
+  justify-content: flex-start;
+}
+
+/* No scrollbar needed if they are all visible */
+
+.reel-card {
+  flex: 1;
+  /* Distribute space equally */
+  min-width: 0;
+  /* Allow shrinking */
+  aspect-ratio: 9 / 16;
+  position: relative;
+  background: #0a0a0a;
+  border-radius: 0;
+  /* Sharp corners as requested */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.5s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+}
+
+.reel-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(177, 128, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.reel-cover {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover;
+  opacity: 0.8;
+  transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+}
+
+.reel-card:hover .reel-cover {
+  transform: scale(1.1);
+  opacity: 0.4;
+}
+
+.reel-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, transparent 60%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  z-index: 2;
+  transition: background 0.5s ease;
+}
+
+.reel-card:hover .reel-overlay {
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(177, 128, 255, 0.1) 100%);
+}
+
+.reel-status {
+  display: none;
+  /* Removed as requested */
+}
+
+/* Sidebar navigation styles */
+.sidebar-nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+
+.left-reels .mobile-nav {
+  position: static;
+  transform: none;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sidebar-reels .mobile-nav:hover {
+  background: rgba(177, 128, 255, 0.2);
+  color: #B180FF;
+  border-color: #B180FF;
+}
+
+.play-prompt {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.4s ease;
+  font-family: 'Six Caps', sans-serif;
+  font-size: 2.2em;
+  color: #B180FF;
+  line-height: 1;
+}
+
+.reel-card:hover .play-prompt {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reel-title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+  margin: 10px 0 0;
+  color: white;
+  opacity: 0.9;
+}
+
 .ig-block {
-  zoom: 0.7;
-  -moz-transform: scale(0.7);
-  -moz-transform-origin: 0 0;
-  -o-transform: scale(0.7);
-  -o-transform-origin: 0 0;
-  -webkit-transform: scale(0.7);
-  -webkit-transform-origin: 0 0;
+  display: none;
 }
 
 .img-block img {
@@ -538,6 +657,13 @@ body.no-scroll {
 
 .breadcrumb-link:hover {
   opacity: 1;
+}
+
+.breadcrumb-active {
+  color: white;
+  opacity: 1;
+  font-family: 'Outfit', sans-serif;
+  font-weight: 300;
 }
 
 /* ============================================
@@ -1404,6 +1530,101 @@ img {
     opacity: 1;
     -webkit-transform: translateZ(0);
     transform: translateZ(0);
+  }
+}
+
+/* ============================================
+   REEL MODAL STYLING
+   ============================================ */
+#reelModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 99999999;
+  /* Higher than top-bar and nav */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.reel-embed-container {
+  width: 90%;
+  max-width: 380px;
+  /* Refined width for reels */
+  height: 85vh;
+  background: black;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 0 100px rgba(177, 128, 255, 0.4);
+  position: relative;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#reelFrame {
+  width: 100%;
+  height: 100%;
+}
+
+#reelModalClose {
+  position: absolute;
+  top: 40px;
+  right: 40px;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 35px;
+  font-weight: 200;
+  cursor: pointer;
+  z-index: 100000001;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+#reelModalClose:hover {
+  opacity: 1;
+}
+
+#reelModal .modal-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: white;
+  font-size: 50px;
+  font-weight: 200;
+  cursor: pointer;
+  padding: 30px;
+  z-index: 100000001;
+  opacity: 0.4;
+  transition: all 0.3s ease;
+}
+
+#reelModal .modal-nav:hover {
+  opacity: 1;
+  color: #B180FF;
+}
+
+#reelPrevBtn {
+  left: 30px;
+}
+
+#reelNextBtn {
+  right: 30px;
+}
+
+@media (max-width: 1024px) {
+  .reel-embed-container {
+    height: 70vh;
+    max-width: 320px;
+  }
+
+  #reelModal .modal-nav {
+    display: none;
+    /* Swipe or close for mobile */
   }
 }
 

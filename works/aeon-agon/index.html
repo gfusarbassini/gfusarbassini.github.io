@@ -14,7 +14,7 @@
   <!-- TOP BAR -->
   <div class="top-bar">
     <a href="../.." class="breadcrumb-link interactable">gabrielefusarbassini</a><a href="../"
-      class="breadcrumb-link interactable">/works</a><span class="breadcrumb-link">/aeon-agon</span>
+      class="breadcrumb-link interactable">/works</a><span class="breadcrumb-active">/aeon-agon</span>
   </div>
 
   <!-- CONTENT -->
@@ -41,16 +41,31 @@
           </div>
         </div>
 
-        <div class="gallery-wrapper initial-hidden">
-          <button class="mobile-nav m-prev" onclick="sideScroll(this, -1)">‹</button>
-          <div class="gallery-row campaign-gallery">
-            <div class="img-block interactable"><img src="../../media/aeonagon-mood-1.webp"></div>
-            <div class="img-block interactable"><img src="../../media/aeonagon-mood-2.webp"></div>
-            <div class="img-block interactable"><img src="../../media/aeonagon-mood-3.webp"></div>
-            <div class="img-block interactable"><img src="../../media/aeonagon-mood-5.webp"></div>
-            <div class="img-block interactable"><img src="../../media/aeonagon-mood-6.webp"></div>
+        <!-- REELS SECTION (Simplified side-by-side) -->
+        <div class="gallery-wrapper left-reels initial-hidden">
+          <div class="gallery-row idea-gallery">
+            <div class="reel-card interactable" data-reel-url="https://www.instagram.com/reel/DFFc0XCtt4d/embed">
+              <img src="../../media/aeonagon-mood-7.webp" class="reel-cover" alt="Episode 8">
+              <div class="reel-overlay">
+                <span class="play-prompt">WATCH REEL</span>
+                <p class="reel-title">Episode 8: From the past</p>
+              </div>
+            </div>
+            <div class="reel-card interactable" data-reel-url="https://www.instagram.com/reel/DFKmhi5CJAd/embed">
+              <img src="../../media/aeonagon-mood-10.webp" class="reel-cover" alt="Episode 7">
+              <div class="reel-overlay">
+                <span class="play-prompt">WATCH REEL</span>
+                <p class="reel-title">Episode 7: Time travel</p>
+              </div>
+            </div>
+            <div class="reel-card interactable" data-reel-url="https://www.instagram.com/reel/DFFdoxAN04n/embed">
+              <img src="../../media/aeonagon-mood-13.webp" class="reel-cover" alt="Episode 4">
+              <div class="reel-overlay">
+                <span class="play-prompt">WATCH REEL</span>
+                <p class="reel-title">Episode 4: Beijing</p>
+              </div>
+            </div>
           </div>
-          <button class="mobile-nav m-next" onclick="sideScroll(this, 1)">›</button>
         </div>
       </div>
     </div>
@@ -87,26 +102,22 @@
           captured the curiosity and appreciation
           of the audience. </div>
 
-        <div class="gallery-row idea-gallery initial-hidden">
-          <div class="ig-block">
-            <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFFc0XCtt4d/embed"
-              frameborder="0"></iframe>
+        <div class="gallery-wrapper initial-hidden">
+          <button class="mobile-nav m-prev" onclick="sideScroll(this, -1)">‹</button>
+          <div class="gallery-row campaign-gallery">
+            <div class="img-block interactable"><img src="../../media/aeonagon-mood-1.webp"></div>
+            <div class="img-block interactable"><img src="../../media/aeonagon-mood-2.webp"></div>
+            <div class="img-block interactable"><img src="../../media/aeonagon-mood-3.webp"></div>
+            <div class="img-block interactable"><img src="../../media/aeonagon-mood-5.webp"></div>
+            <div class="img-block interactable"><img src="../../media/aeonagon-mood-6.webp"></div>
           </div>
-          <div class="ig-block">
-            <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFKmhi5CJAd/embed" frameborder="0"
-              style="margin-left:-50%"></iframe>
-          </div>
-          <div class="ig-block">
-            <iframe max-width="100" height="400" src="https://www.instagram.com/reel/DFFdoxAN04n/embed" frameborder="0"
-              style="margin-left:-100%"></iframe>
-          </div>
+          <button class="mobile-nav m-next" onclick="sideScroll(this, 1)">›</button>
         </div>
-
-
       </div>
 
-      <div class="right-menu-panel" id="menu-container"></div>
     </div>
+
+    <div class="right-menu-panel" id="menu-container"></div>
 
     <!-- MODAL -->
     <div id="imageModal">
@@ -114,6 +125,16 @@
       <button id="prevBtn" class="modal-nav interactable">‹</button>
       <button id="nextBtn" class="modal-nav interactable">›</button>
       <img id="modalImg" src="">
+    </div>
+
+    <!-- REEL MODAL -->
+    <div id="reelModal" class="modal">
+      <button id="reelModalClose" class="interactable">✕</button>
+      <button id="reelPrevBtn" class="modal-nav interactable">‹</button>
+      <button id="reelNextBtn" class="modal-nav interactable">›</button>
+      <div class="reel-embed-container">
+        <iframe id="reelFrame" src="" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+      </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

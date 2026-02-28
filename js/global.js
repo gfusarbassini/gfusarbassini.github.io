@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const modalClose = document.getElementById('modalClose');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
-      const projectImages = Array.from(document.querySelectorAll('.interactable img, img.interactable'));
+      const projectImages = Array.from(document.querySelectorAll('.interactable img:not(.reel-cover), img.interactable:not(.reel-cover)'));
       let currentIndex = 0;
 
       const updateModalImage = (index) => {
@@ -168,4 +168,56 @@ document.addEventListener('DOMContentLoaded', () => {
     delay: 0.2,
     ease: "power2.out"
   });
+
+  // === REEL MODAL LOGIC ===
+  const reelModal = document.getElementById('reelModal');
+  if (reelModal) {
+    const reelCards = Array.from(document.querySelectorAll('.reel-card'));
+    const reelFrame = document.getElementById('reelFrame');
+    const reelClose = document.getElementById('reelModalClose');
+    const reelPrev = document.getElementById('reelPrevBtn');
+    const reelNext = document.getElementById('reelNextBtn');
+    let currentReelIndex = 0;
+
+    const openReel = (index) => {
+      currentReelIndex = index;
+      const url = reelCards[currentReelIndex].getAttribute('data-reel-url');
+      reelFrame.src = url;
+      reelModal.style.display = 'flex';
+      document.body.classList.add('no-scroll');
+
+      // Force Instagram embed to re-process if needed
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    };
+
+    const closeReel = () => {
+      reelModal.style.display = 'none';
+      reelFrame.src = ''; // Stop video playback
+      document.body.classList.remove('no-scroll');
+    };
+
+    reelCards.forEach((card, index) => {
+      card.addEventListener('click', () => openReel(index));
+    });
+
+    if (reelClose) reelClose.addEventListener('click', closeReel);
+    if (reelPrev) reelPrev.addEventListener('click', () => openReel((currentReelIndex - 1 + reelCards.length) % reelCards.length));
+    if (reelNext) reelNext.addEventListener('click', () => openReel((currentReelIndex + 1) % reelCards.length));
+
+    // Handle background click to close
+    reelModal.addEventListener('click', (e) => {
+      if (e.target === reelModal) closeReel();
+    });
+
+    // Mirror image keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (reelModal.style.display === 'flex') {
+        if (e.key === 'ArrowLeft') openReel((currentReelIndex - 1 + reelCards.length) % reelCards.length);
+        else if (e.key === 'ArrowRight') openReel((currentReelIndex + 1) % reelCards.length);
+        else if (e.key === 'Escape') closeReel();
+      }
+    });
+  }
 });
