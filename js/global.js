@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseDepth = isRepoFolder ? 2 : 1;
     let prefix = '../'.repeat(Math.max(0, depth - baseDepth));
 
-    const items = ["BIO", "WORKS", "WEBSITES", "RENDERS", "PHOTOGRAPHY"];
+    const items = ["BIO", "WORKS", "MOGRAPH", "WEBSITES", "RENDERS", "PHOTOGRAPHY"];
 
     let menuHTML = `<div class="menu">`;
     items.forEach(item => {
