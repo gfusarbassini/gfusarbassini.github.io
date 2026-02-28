@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (menuContainer) {
     const path = window.location.pathname;
     const homeActive = isHomePage();
-    
+
     // Calcola il prefisso per tornare alla root
     // Se siamo in una sottocartella (es. /works/progetto), serve "../../"
     const depth = (path.match(/\//g) || []).length;
@@ -31,8 +31,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseDepth = isRepoFolder ? 2 : 1;
     let prefix = '../'.repeat(Math.max(0, depth - baseDepth));
 
-    const items = ["BIO", "WORKS", "WEBSITES", "RENDERS"];
-    
+    const items = ["BIO", "WORKS", "WEBSITES", "RENDERS", "PHOTOGRAPHY"];
+
     let menuHTML = `<div class="menu">`;
     items.forEach(item => {
       // Link alla cartella (index) senza .html
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // === CUSTOM CURSOR ===
   const cursor = document.querySelector('.custom-cursor');
   if (cursor && window.innerWidth > 768) {
-    document.body.style.cursor = 'none'; 
+    document.body.style.cursor = 'none';
     document.addEventListener('mousemove', (e) => {
       gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.1 });
     });
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateMenuPosition = () => {
       if (window.innerWidth <= 1024 && header) {
         const headerRect = header.getBoundingClientRect();
-        menuContainer.style.top = `0px`; 
+        menuContainer.style.top = `0px`;
         menuContainer.style.paddingTop = `${headerRect.bottom + 20}px`;
         menuContainer.style.height = `100vh`;
       }
@@ -114,20 +114,23 @@ document.addEventListener('DOMContentLoaded', () => {
       const modalClose = document.getElementById('modalClose');
       const prevBtn = document.getElementById('prevBtn');
       const nextBtn = document.getElementById('nextBtn');
-      const projectImages = Array.from(document.querySelectorAll('.interactable img'));
+      const projectImages = Array.from(document.querySelectorAll('.interactable img, img.interactable'));
       let currentIndex = 0;
 
       const updateModalImage = (index) => {
         currentIndex = index;
-        modalImg.src = projectImages[currentIndex].src;
+        const img = projectImages[currentIndex];
+        // Priority to data-src for high-resolution if it exists, otherwise use src
+        modalImg.src = img.getAttribute('data-src') || img.src;
       };
 
       projectImages.forEach((img, index) => {
         img.addEventListener('click', (e) => {
           e.preventDefault();
           updateModalImage(index);
-          modal.style.display = 'block';
+          modal.style.display = 'flex';
           document.body.classList.add('no-scroll');
+          if (typeof refreshCursorListeners === 'function') refreshCursorListeners();
         });
       });
 
@@ -141,7 +144,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (modalClose) modalClose.addEventListener('click', closeModal);
 
       document.addEventListener('keydown', (e) => {
-        if (modal.style.display === 'block') {
+        if (modal.style.display === 'flex') {
           if (e.key === 'ArrowLeft') updateModalImage((currentIndex - 1 + projectImages.length) % projectImages.length);
           else if (e.key === 'ArrowRight') updateModalImage((currentIndex + 1) % projectImages.length);
           else if (e.key === 'Escape') closeModal();

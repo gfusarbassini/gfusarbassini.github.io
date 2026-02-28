@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Gabriele Fusar Bassini Portfolio</title>
   <link rel="stylesheet" href="css/global.css">
 </head>
-<body>
-  <div class="custom-cursor"></div>
 
-  <!-- TOP BAR -->
-  <div class="top-bar">
-    <span class="what-i-do-label">What I do:</span>
-    <ul class="what-i-do-list">
-      <li>Art Direction</li>
-      <li>Graphic Design</li>
-      <li>Web Design & Dev</li>
-      <li>Motion Graphics</li>
-      <li>Video</li>
-      <li>3D Rendering</li>
-      <li>Photography</li>
-    </ul>
-    <div id="cycler-container">
-      <span class="cycle-item active">Art Direction</span>
-      <span class="cycle-item">Graphic Design</span>
-      <span class="cycle-item">Web Design & Dev</span>
-      <span class="cycle-item">Motion Graphics</span>
-      <span class="cycle-item">Video</span>
-      <span class="cycle-item">3D Rendering</span>
-      <span class="cycle-item">Photography</span>
-    </div>
+<div class="custom-cursor"></div>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  <span class="what-i-do-label">What I do:</span>
+  <ul class="what-i-do-list">
+    <li>Art Direction</li>
+    <li>Graphic Design</li>
+    <li>Web Design & Dev</li>
+    <li>Motion Graphics</li>
+    <li>Video</li>
+    <li>3D Rendering</li>
+    <li>Photography</li>
+  </ul>
+  <div id="cycler-container">
+    <span class="cycle-item active">Art Direction</span>
+    <span class="cycle-item">Graphic Design</span>
+    <span class="cycle-item">Web Design & Dev</span>
+    <span class="cycle-item">Motion Graphics</span>
+    <span class="cycle-item">Video</span>
+    <span class="cycle-item">3D Rendering</span>
+    <span class="cycle-item">Photography</span>
   </div>
+</div>
 
-  <!-- CONTENT -->
-  <div class="container">
-    <div class="left">
-      <div class="header initial-hidden" id="main-header">
-        <span>PORTFOLIO</span>
-        <img src="media/ball.webp" alt="logo" class="logo">
-        <span class="name">GABRIELE FUSAR BASSINI</span>
-        <div class="burger" id="burger"><span></span><span></span><span></span></div>
-      </div>
-      <div class="page-content">
+<!-- CONTENT -->
+<div class="container">
+  <div class="left">
+    <div class="header initial-hidden" id="main-header">
+      <span>PORTFOLIO</span>
+      <img src="media/ball.webp" alt="logo" class="logo">
+      <span class="name">GABRIELE FUSAR BASSINI</span>
+      <div class="burger" id="burger"><span></span><span></span><span></span></div>
+    </div>
+    <div class="page-content">
       <div class="project-item initial-hidden">
         <div class="img-block interactable initial-hidden">
           <div class="hover-video">
-            <iframe 
-              src="https://www.youtube.com/embed/qPpxhYxgXNQ?si=MXzHnK9ZKB_q13g_" 
-              title="Gabriele Fusar Bassini - Showreel 2025"
-              allowfullscreen>
+            <iframe src="https://www.youtube.com/embed/qPpxhYxgXNQ?si=MXzHnK9ZKB_q13g_"
+              title="Gabriele Fusar Bassini - Showreel 2025" allowfullscreen>
             </iframe>
           </div>
         </div>
@@ -61,39 +60,40 @@
     </div>
   </div>
 
-    <div class="middle">
-      <div class="project-item initial-hidden">
-        <a href="works/atm" class="img-block interactable initial-hidden">
-          <div class="work-thumb">
-            <img src="media/ATM_banner.webp" alt="ATM Job Tour">
-          </div>
-        </a>
-        <div class="caption">
-          THE CHARM OF THE UNIFORM
-          <img src="media/ball.webp" class="logo" alt="logo">
-          <span class="client">ATM</span>
+  <div class="middle">
+    <div class="project-item initial-hidden">
+      <a href="works/atm" class="img-block interactable initial-hidden">
+        <div class="work-thumb">
+          <img src="media/ATM_banner.webp" alt="ATM Job Tour">
         </div>
-      </div>
-
-      <div class="project-item initial-hidden">
-        <a href="works/aeon-agon" class="img-block interactable initial-hidden">
-          <div class="work-thumb">
-            <img src="media/aeonagon.webp" alt="World Athletics">
-          </div>
-
-        </a>
-        <div class="caption">
-          LET'S PLAY
-          <img src="media/ball.webp" class="logo" alt="logo">
-          <span class="client">WORLD ATHLETICS</span>
-        </div>
+      </a>
+      <div class="caption">
+        THE CHARM OF THE UNIFORM
+        <img src="media/ball.webp" class="logo" alt="logo">
+        <span class="client">ATM</span>
       </div>
     </div>
 
-    <div class="right-menu-panel" id="menu-container"></div>
+    <div class="project-item initial-hidden">
+      <a href="works/aeon-agon" class="img-block interactable initial-hidden">
+        <div class="work-thumb">
+          <img src="media/aeonagon.webp" alt="World Athletics">
+        </div>
+
+      </a>
+      <div class="caption">
+        LET'S PLAY
+        <img src="media/ball.webp" class="logo" alt="logo">
+        <span class="client">WORLD ATHLETICS</span>
+      </div>
+    </div>
   </div>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="js/global.js"></script>
+  <div class="right-menu-panel" id="menu-container"></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="js/global.js"></script>
 </body>
+
 </html>
