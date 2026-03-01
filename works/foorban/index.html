@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Foorban - Choose Better</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <a href="../.." class="breadcrumb-link interactable">gabrielefusarbassini</a><a href="../"
+            class="breadcrumb-link interactable">/works</a><span class="breadcrumb-active">/foorban</span>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="header initial-hidden" id="main-header">
+                <span>CHOOSE BETTER</span>
+                <img src="../../media/ball.webp" alt="logo" class="logo">
+                <span class="client">FOORBAN</span>
+                <div class="burger" id="burger"><span></span><span></span><span></span></div>
+            </div>
+            <div class="page-content">
+                <div class="tags initial-hidden">
+                    <div class="tag interactable">3D Rendering</div>
+                    <div class="tag interactable">Photography</div>
+                    <div class="tag interactable">OOH Campaign</div>
+                </div>
+                <div class="img-block interactable initial-hidden">
+                    <img src="../../media/foorban04.webp" alt="Foorban Hero">
+                </div>
+
+                <div class="gallery-wrapper initial-hidden">
+                    <button class="mobile-nav m-prev" onclick="sideScroll(this, -1)">‹</button>
+                    <div class="gallery-row campaign-gallery">
+                        <div class="img-block interactable"><img src="../../media/foorban01.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/foorban02.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/foorban03.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/foorban05.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/foorban06.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/foorban07.webp"></div>
+                    </div>
+                    <button class="mobile-nav m-next" onclick="sideScroll(this, 1)">›</button>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="idea-header-group initial-hidden">
+                <div class="header" style="margin:0"><span>THE IDEA</span></div>
+                <div class="color-palette">
+                    <div class="color-swatch" style="background-color: #36614D;"></div>
+                    <div class="color-swatch" style="background-color: #9CD57D;"></div>
+                    <div class="color-swatch" style="background-color: #D5BB7C;"></div>
+                    <div class="color-swatch" style="background-color: #FAFBFA; border: 1px solid rgba(0,0,0,0.05);">
+                    </div>
+                    <div class="color-swatch" style="background-color: #91C398;"></div>
+                </div>
+            </div>
+            <div class="page-content-middle">
+                <div class="text-block initial-hidden">
+                    I produced the visual assets for Foorban’s Summer 2025 OOH campaign, featured across major hubs in
+                    Rome and Emilia-Romagna. By blending photography and 3D rendering, I created high-impact imagery
+                    that brought the food startup’s summer vision to life in high-traffic urban spaces.
+                    <br><br>
+                    The goal was to create high-impact, fresh, and appetizing visuals that communicate the quality and
+                    convenience of Foorban's offerings.
+                    <br><br>
+                    Advertising by <a href="https://linkedin.com/in/sabrina-bisi/" target="_blank" class="interactable"
+                        style="color:inherit; text-decoration: underline;"><b>Sabrina Bisi</b></a>.
+                </div>
+            </div>
+        </div>
+        <div class="right-menu-panel" id="menu-container"></div>
+    </div>
+
+    <div id="imageModal">
+        <button id="modalClose" class="interactable">✕</button>
+        <button id="prevBtn" class="modal-nav interactable">‹</button>
+        <button id="nextBtn" class="modal-nav interactable">›</button>
+        <img id="modalImg" src="">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../../js/global.js"></script>
+</body>
+
+</html>

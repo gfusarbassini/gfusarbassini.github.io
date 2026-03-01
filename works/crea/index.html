@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Leaning towards 2050 - TEDxLungarnoMediceo</title>
+    <link rel="stylesheet" href="../../css/global.css" />
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <a href="../.." class="breadcrumb-link interactable">gabrielefusarbassini</a><a href="../"
+            class="breadcrumb-link interactable">/works</a><span class="breadcrumb-active">/crea</span>
+    </div>
+
+    <div class="container">
+        <div class="left">
+            <div class="header initial-hidden" id="main-header">
+                <span>LEANING TOWARDS 2050</span>
+                <img src="../../media/ball.webp" alt="logo" class="logo">
+                <span class="client">TEDXLUNGARNOMEDICEO</span>
+                <div class="burger" id="burger"><span></span><span></span><span></span></div>
+            </div>
+            <div class="page-content">
+                <div class="tags initial-hidden">
+                    <div class="tag interactable">Art Direction</div>
+                    <div class="tag interactable">Graphic Design</div>
+                    <div class="tag interactable">3D Rendering</div>
+                    <div class="tag interactable">Photography</div>
+                </div>
+                <div class="img-block interactable initial-hidden">
+                    <div class="hover-video">
+                        <iframe src="https://www.youtube.com/embed/OxdTUQn4xkc?si=I9quN007XUHOlKSg"
+                            title="TEDxLungarnoMediceo 2050" allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="side-by-side initial-hidden"
+                    style="display: flex; gap: 20px; align-items: flex-start; margin-top: 30px;">
+                    <div class="img-block interactable" style="flex: 0 0 40%; margin: 0;">
+                        <img src="../../media/tedx-2050-2.webp" alt="TEDx Creation">
+                    </div>
+                    <div class="text-block" style="margin: 0; line-height: 1.6;">
+                        From 2021 to 2023, I took part in three editions of TEDxLungarnoMediceo (now TEDxPisa), working
+                        as Art Director, graphic designer, photographer, and web developer. I also contributed to the
+                        video for Marco Calanca (aka Becko) titled “Crea”, handling the artwork, and coordinated the
+                        talks of both Becko and Matteo “ESSEHO” Montalesi, a pop singer-songwriter and producer. The key
+                        visual is simple and direct: the X, half-formed by the Leaning Tower of Pisa, is still used by
+                        the team today.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="page-content-middle" style="margin-top: 100px;">
+                <div class="idea-header-group initial-hidden" style="margin-top: 0px;">
+                    <div class="header" style="margin:0"><span>CREATE</span></div>
+                    <div class="color-palette">
+                        <div class="color-swatch" style="background-color: #73aad5;"></div>
+                        <div class="color-swatch" style="background-color: #050e28;"></div>
+                        <div class="color-swatch" style="background-color: #88c9ea;"></div>
+                        <div class="color-swatch" style="background-color: #426684;"></div>
+                        <div class="color-swatch"
+                            style="background-color: #ffffff; border: 1px solid rgba(0,0,0,0.05);"></div>
+                    </div>
+                </div>
+
+                <div class="text-block initial-hidden" style="margin-top: 20px;">
+                    Becko’s vision of a dystopian future echoes a style I’ve embraced multiple times: mysterious
+                    identities, y2k aesthetics, glitches, and technologies. That’s why, during the interlude between his
+                    two performances, I proposed a sequence of images—ranging from 3D renders to early, early AI
+                    experiments—depicting a Pisa transformed by technology, yet holding onto the hope of a future where
+                    creativity won’t be lost. I also documented the event as a photographer, focusing on authenticity
+                    and emotion.
+                </div>
+
+                <div class="gallery-wrapper initial-hidden" style="margin-top: 40px;">
+                    <button class="mobile-nav m-prev" onclick="sideScroll(this, -1)">‹</button>
+                    <div class="gallery-row campaign-gallery">
+                        <div class="img-block interactable"><img src="../../media/tedx-2050-3.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/tedx-2050-4.webp"></div>
+                        <div class="img-block interactable"><img src="../../media/tedx-2050-5.webp"></div>
+                    </div>
+                    <button class="mobile-nav m-next" onclick="sideScroll(this, 1)">›</button>
+                </div>
+            </div>
+        </div>
+        <div class="right-menu-panel" id="menu-container"></div>
+    </div>
+
+    <div id="imageModal">
+        <button id="modalClose" class="interactable">✕</button>
+        <button id="prevBtn" class="modal-nav interactable">‹</button>
+        <button id="nextBtn" class="modal-nav interactable">›</button>
+        <img id="modalImg" src="">
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../../js/global.js"></script>
+</body>
+
+</html>
