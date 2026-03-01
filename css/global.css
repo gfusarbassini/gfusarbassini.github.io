@@ -377,6 +377,147 @@ body.no-scroll {
 }
 
 /* ============================================
+   MOGRAPH REEL (Kinetic & Immersive)
+   ============================================ */
+.mograph-reel-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  z-index: 100;
+  padding: 0;
+  margin: 0;
+}
+
+.mograph-reel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mograph-card {
+  flex: 0 0 100vw;
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-align: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.mograph-bg-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Six Caps', sans-serif;
+  font-size: 40vw;
+  line-height: 0.8;
+  color: rgba(255, 255, 255, 0.03);
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+}
+
+.mograph-video-wrapper {
+  position: relative;
+  width: 70vw;
+  aspect-ratio: 16 / 9;
+  z-index: 2;
+  box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  background: #000;
+}
+
+.mograph-card:hover .mograph-video-wrapper {
+  transform: scale(1.02);
+}
+
+.mograph-info {
+  position: absolute;
+  bottom: 8vh;
+  left: 5vw;
+  z-index: 3;
+  text-align: left;
+}
+
+.mograph-title {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 8em;
+  line-height: 0.9;
+  margin: 0;
+  color: white;
+}
+
+.mograph-client {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 200;
+  font-size: 1.2em;
+  opacity: 0.5;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: white;
+  margin-top: 5px;
+  display: block;
+}
+
+.mograph-progress {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 1000;
+}
+
+.mograph-progress-bar {
+  height: 100%;
+  background: white;
+  width: 0%;
+  transition: width 0.3s ease;
+}
+
+.mograph-nav-hint {
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  opacity: 0.3;
+  z-index: 1000;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .mograph-video-wrapper {
+    width: 90vw;
+  }
+
+  .mograph-title {
+    font-size: 5em;
+  }
+
+  .mograph-bg-text {
+    font-size: 60vw;
+  }
+}
+
+/* ============================================
    IMAGE BLOCKS & GALLERIES
    ============================================ */
 
