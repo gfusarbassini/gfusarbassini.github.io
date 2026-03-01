@@ -936,7 +936,7 @@ body.no-scroll {
 
   .menu-home {
     position: relative;
-    top: -100px;
+    top: -60px;
   }
 
   .right-menu-panel.active {
@@ -1719,5 +1719,9 @@ a:visited {
 @media (max-width: 1024px) {
   .photo-block .header {
     font-size: 2.2em;
+  }
+
+  .section-description {
+    left: -10px;
   }
 }
