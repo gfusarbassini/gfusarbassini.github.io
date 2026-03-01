@@ -248,6 +248,7 @@ body.no-scroll {
 .works-wrapper {
   width: 82%;
   padding: 0 10px;
+  margin: 0 auto;
 }
 
 .works-grid {
@@ -591,7 +592,7 @@ body.no-scroll {
   display: flex;
   gap: 15px;
   align-items: center;
-  margin-left: 150px;
+  margin-left: 20px;
 }
 
 .color-swatch {
@@ -828,8 +829,6 @@ body.no-scroll {
 }
 
 /* Removed cursor: none !important from modal controls to allow custom cursor */
-#modalClose,
-.modal-nav {}
 
 #modalClose {
   position: absolute;
@@ -1017,6 +1016,20 @@ body.no-scroll {
 
   .m-next {
     right: -5px;
+  }
+
+  .menu {
+    font-size: 3.5em;
+  }
+
+  .section-description {
+    left: 0;
+    padding: 0 40px 20px 20px;
+    top: 0;
+    font-size: 0.9em;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
   }
 }
 
