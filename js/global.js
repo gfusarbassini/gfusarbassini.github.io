@@ -43,7 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!homeActive) {
       const homeLink = prefix === '' ? './' : prefix;
       menuHTML += `
-        <br>
         <a href="${homeLink}" class="menu-home nav-item interactable">
           <span class="home-arrow">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

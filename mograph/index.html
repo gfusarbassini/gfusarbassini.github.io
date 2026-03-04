@@ -18,123 +18,136 @@
     </div>
 
     <!-- CONTENT -->
-    <div class="mograph-reel-container" id="reel-scroller">
-        <!-- Project 1 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">FORENSE</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/Cz8VWDZclF0" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">CONGRESSO FORENSE</h2>
-                <span class="mograph-client">MOTION GRAPHICS</span>
-            </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">TEDx 2023</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/OxdTUQn4xkc" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">TEDx 2023 INTRO</h2>
-                <span class="mograph-client">MOTION DESIGN</span>
-            </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">PLANCKS</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/I7Pzp5dfIac" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">PLANCKS 2023</h2>
-                <span class="mograph-client">VISUAL DESIGN</span>
-            </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">HOMNIA</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/C_h6_AcV5YA" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">HOMNIA INTRO</h2>
-                <span class="mograph-client">CGI & MOTION</span>
-            </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">TEDx 2022</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/9WYwAA6ITko" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">TEDx 2022 INTRO</h2>
-                <span class="mograph-client">MOTION DESIGN</span>
-            </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="mograph-card">
-            <div class="mograph-bg-text">PIQUED</div>
-            <div class="mograph-video-wrapper">
-                <div class="hover-video">
-                    <iframe src="https://www.youtube.com/embed/YekEmMDH1bQ" allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="mograph-info">
-                <h2 class="mograph-title">TEDx 2023 PIQUED JACKS</h2>
-                <span class="mograph-client">STAGE DESIGN</span>
+    <div class="container">
+        <div class="works-wrapper" style="width: 100%;">
+            <div class="header initial-hidden" id="main-header">
+                <span>MOTION GRAPHICS</span>
+                <div class="burger" id="burger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </div>
 
-    <!-- UI ELEMENTS -->
-    <div class="mograph-progress">
-        <div class="mograph-progress-bar" id="progress-bar"></div>
-    </div>
-    <div class="mograph-nav-hint">SCROLL TO EXPLORE</div>
+    <div class="mograph-container">
+        <!-- Main Player -->
+        <div class="mograph-main initial-hidden">
+            <div class="main-player-wrapper">
+                <div class="hover-video">
+                    <iframe id="main-video-frame" src="https://www.youtube.com/embed/Cz8VWDZclF0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="main-video-info">
+                <h2 id="main-video-title" class="mograph-title">CONGRESSO NAZIONALE FORENSE</h2>
+                <p id="main-video-desc" class="mograph-desc">Motion graphics intro for the National Forensic Congress.
+                </p>
+            </div>
+        </div>
 
-    <div class="burger" id="burger" style="position:fixed; top:40px; right:40px; z-index:10002;">
-        <span></span><span></span><span></span>
+        <!-- Sidebar List -->
+        <div class="mograph-sidebar initial-hidden">
+            <div class="sidebar-header">ALL PROJECTS</div>
+            <div class="sidebar-list">
+                <!-- Project 1 -->
+                <div class="sidebar-item active interactable" data-video-id="Cz8VWDZclF0"
+                    data-title="CONGRESSO NAZIONALE FORENSE"
+                    data-desc="Motion graphics intro for the National Forensic Congress.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/Cz8VWDZclF0/mqdefault.jpg" alt="Forense">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">CONGRESSO NAZIONALE FORENSE</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="sidebar-item interactable" data-video-id="OxdTUQn4xkc" data-title="TEDx 2023 INTRO"
+                    data-desc="Introspective and dynamic intro for TEDx 2023.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/OxdTUQn4xkc/mqdefault.jpg" alt="TEDx 2023">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">TEDx 2023 INTRO</div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="sidebar-item interactable" data-video-id="I7Pzp5dfIac" data-title="PLANCKS 2023"
+                    data-desc="Visual identity and motion for PLANCKS 2023 physics competition.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/I7Pzp5dfIac/mqdefault.jpg" alt="Plancks">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">PLANCKS 2023</div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="sidebar-item interactable" data-video-id="C_h6_AcV5YA" data-title="HOMNIA"
+                    data-desc="Motion design for the Homnia intro sequence.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/C_h6_AcV5YA/mqdefault.jpg" alt="Homnia">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">HOMNIA</div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="sidebar-item interactable" data-video-id="9WYwAA6ITko" data-title="TEDx 2022 INTRO"
+                    data-desc="High-impact motion design for TEDx 2022 opening sequence.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/9WYwAA6ITko/mqdefault.jpg" alt="TEDx 2022">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">TEDx 2022 INTRO</div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="sidebar-item interactable" data-video-id="YekEmMDH1bQ" data-title="TEDx 2023 WALK IN INTRO"
+                    data-desc="Stage visuals at TEDx 2023.">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/YekEmMDH1bQ/mqdefault.jpg" alt="Piqued">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">TEDx 2023 WALK IN INTRO</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
+
     <div class="right-menu-panel" id="menu-container"></div>
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const scroller = document.getElementById('reel-scroller');
-            const bar = document.getElementById('progress-bar');
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const mainVideo = document.getElementById('main-video-frame');
+            const mainTitle = document.getElementById('main-video-title');
+            const mainClient = document.getElementById('main-video-client');
+            const mainDesc = document.getElementById('main-video-desc');
 
-            if (scroller && bar) {
-                scroller.addEventListener('scroll', () => {
-                    const max = scroller.scrollWidth - scroller.clientWidth;
-                    const percent = (scroller.scrollLeft / max) * 100;
-                    bar.style.width = percent + '%';
-                });
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Update Active Class
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
 
-                // Support mousewheel horizontal scroll
-                scroller.addEventListener('wheel', (e) => {
-                    if (e.deltaY !== 0) {
-                        e.preventDefault();
-                        scroller.scrollLeft += e.deltaY;
+                    // Update Main Player
+                    const videoId = item.getAttribute('data-video-id');
+                    const title = item.getAttribute('data-title');
+                    const desc = item.getAttribute('data-desc');
+
+                    mainVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    mainTitle.innerText = title;
+                    mainDesc.innerText = desc;
+
+                    // Scroll to top on mobile
+                    if (window.innerWidth <= 1024) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
                 });
-            }
+            });
         });
     </script>
 
