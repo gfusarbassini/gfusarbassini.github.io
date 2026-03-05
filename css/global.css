@@ -1036,8 +1036,8 @@ body.no-scroll {
   font-family: 'Outfit', sans-serif;
   font-weight: 200;
   font-size: 1.1rem;
-  margin-top: 10px;
-  /* Reset to natural spacing since <br> is gone */
+  margin-top: 20px;
+  /* Reset to natural spacing */
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -1159,13 +1159,20 @@ body.no-scroll {
     position: relative !important;
     width: 100% !important;
     font-size: 2.2em;
-    padding: 10px 0;
-    margin-top: 0;
+    padding: 0px 0;
+    margin-left:-10px;
+    margin-top: -10px;
     margin-bottom: 5px;
   }
 
   .burger {
     display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    margin: 0;
+    margin-top:15px;
   }
 
   .right-menu-panel {
@@ -1180,8 +1187,7 @@ body.no-scroll {
   }
 
   .menu-home {
-    position: relative;
-    top: -60px;
+    margin-top: 20px;
   }
 
   .right-menu-panel.active {

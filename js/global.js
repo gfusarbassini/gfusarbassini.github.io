@@ -31,18 +31,19 @@ document.addEventListener('DOMContentLoaded', () => {
     const baseDepth = isRepoFolder ? 2 : 1;
     let prefix = '../'.repeat(Math.max(0, depth - baseDepth));
 
-    const items = ["BIO", "WORKS", "MOGRAPH", "WEBSITES", "RENDERS", "PHOTOGRAPHY"];
+    const items = ["BIO", "WORKS", "MOGRAPH", "WEBSITES", "RENDERS", "PHOTOGRAPHY", "STORIES"];
 
     let menuHTML = `<div class="menu">`;
-    items.forEach(item => {
+    items.forEach((item, index) => {
       // Link alla cartella (index) senza .html
       const link = `${prefix}${item.toLowerCase()}/`;
-      menuHTML += `<a href="${link}" class="menu-item nav-item interactable">${item}</a><br>`;
+      menuHTML += `<a href="${link}" class="menu-item nav-item interactable">${item}</a>`;
+      if (index < items.length - 1) menuHTML += `<br>`;
     });
 
     if (!homeActive) {
       const homeLink = prefix === '' ? './' : prefix;
-      menuHTML += `
+      menuHTML += `<br>
         <a href="${homeLink}" class="menu-home nav-item interactable">
           <span class="home-arrow">
             <svg viewBox="0 0 24 24" fill="none"><path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

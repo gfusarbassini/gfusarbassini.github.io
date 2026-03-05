@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Stories - Gabriele Fusar Bassini</title>
+    <link rel="stylesheet" href="../css/global.css">
+</head>
+
+<body>
+    <div class="custom-cursor"></div>
+
+    <!-- TOP BAR -->
+    <div class="top-bar">
+        <a href="../" class="breadcrumb-link interactable">gabrielefusarbassini</a><span
+            class="breadcrumb-active">/stories</span>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="container">
+        <div class="works-wrapper" style="width: 100%;">
+            <div class="header initial-hidden" id="main-header">
+                <span>STORIES</span>
+                <div class="burger" id="burger"><span></span><span></span><span></span></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mograph-container">
+        <!-- Main Player -->
+        <div class="mograph-main initial-hidden">
+            <div class="main-player-wrapper">
+                <div class="hover-video">
+                    <iframe id="main-video-frame" src="https://www.youtube.com/embed/n80N5bePRo0"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="main-video-info">
+                <h2 id="main-video-title" class="mograph-title">KARIBU</h2>
+                <p id="main-video-desc" class="mograph-desc">Short Documentary</p>
+            </div>
+        </div>
+
+        <!-- Sidebar List -->
+        <div class="mograph-sidebar initial-hidden">
+            <div class="sidebar-header">ALL PROJECTS</div>
+            <div class="sidebar-list">
+                <!-- Project 1 -->
+                <div class="sidebar-item active interactable" data-video-id="n80N5bePRo0" data-title="KARIBU"
+                    data-desc="Short Documentary">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/n80N5bePRo0/mqdefault.jpg" alt="Karibu">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">KARIBU</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="sidebar-item interactable" data-video-id="fV7X00xupuw" data-title="PIQUED JACKS"
+                    data-desc="Interview at TEDxLungarnoMediceo 2023">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/fV7X00xupuw/mqdefault.jpg" alt="Piqued Jacks">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">PIQUED JACKS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right-menu-panel" id="menu-container"></div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const sidebarItems = document.querySelectorAll('.sidebar-item');
+            const mainVideo = document.getElementById('main-video-frame');
+            const mainTitle = document.getElementById('main-video-title');
+            const mainDesc = document.getElementById('main-video-desc');
+
+            sidebarItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    // Update Active Class
+                    sidebarItems.forEach(i => i.classList.remove('active'));
+                    item.classList.add('active');
+
+                    // Update Main Player
+                    const videoId = item.getAttribute('data-video-id');
+                    const title = item.getAttribute('data-title');
+                    const desc = item.getAttribute('data-desc');
+
+                    mainVideo.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+                    mainTitle.innerText = title;
+                    mainDesc.innerText = desc;
+
+                    // Scroll to top on mobile
+                    if (window.innerWidth <= 1024) {
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="../js/global.js"></script>
+</body>
+
+</html>
