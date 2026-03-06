@@ -67,7 +67,7 @@ body.no-scroll {
 }
 
 .page-content {
-  margin-top: 3rem
+  margin-top: 7rem
 }
 
 .page-content-middle {
@@ -437,7 +437,7 @@ body.no-scroll {
   width: 100%;
   height: calc(100vh - 120px);
   /* Matching works page header positioning */
-  margin-top: 70px;
+  margin-top: 130px;
   padding: 0 150px 0 30px;
   /* Shifted back 80px */
   gap: 40px;
@@ -589,7 +589,7 @@ body.no-scroll {
     flex-direction: column;
     height: auto;
     padding: 15px;
-    margin-top: 10px;
+    margin-top: 50px;
   }
 
   .mograph-sidebar {
