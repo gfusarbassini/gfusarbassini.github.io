@@ -610,7 +610,7 @@ body.no-scroll {
   }
 
   .mograph-title {
-    font-size: 5em;
+    font-size: 2.4em;
   }
 
   .mograph-bg-text {
@@ -1036,7 +1036,9 @@ body.no-scroll {
   font-family: 'Outfit', sans-serif;
   font-weight: 200;
   font-size: 1.1rem;
-  margin-top: 20px;
+  position: relative;
+  top: -40px;
+  margin-top: 0px;
   /* Reset to natural spacing */
   display: inline-flex;
   align-items: center;
@@ -1152,7 +1154,7 @@ body.no-scroll {
   .left,
   .middle {
     width: 100%;
-    padding: 0;
+    padding: 0 10px;
   }
 
   .header {
@@ -1160,7 +1162,7 @@ body.no-scroll {
     width: 100% !important;
     font-size: 2.2em;
     padding: 0px 0;
-    margin-left:-10px;
+    margin-left: 0px;
     margin-top: -10px;
     margin-bottom: 5px;
   }
@@ -1172,7 +1174,7 @@ body.no-scroll {
     right: 0;
     transform: translateY(-50%);
     margin: 0;
-    margin-top:15px;
+    margin-top: 15px;
   }
 
   .right-menu-panel {
@@ -1183,11 +1185,12 @@ body.no-scroll {
     transition: transform 0.6s cubic-bezier(0.77, 0, 0.175, 1), visibility 0s linear 0.6s;
     pointer-events: none;
     padding-top: 40px;
+    padding-left: 30px;
     z-index: 100;
   }
 
   .menu-home {
-    margin-top: 20px;
+    margin-top: 60px;
   }
 
   .right-menu-panel.active {
@@ -1273,6 +1276,10 @@ body.no-scroll {
     font-size: 3.5em;
   }
 
+  .sidebar-title {
+    font-size: 1.4em !important;
+  }
+
   .section-description {
     left: 0;
     padding: 0 40px 20px 20px;
@@ -1301,8 +1308,8 @@ body.no-scroll {
   }
 
   .top-bar {
-    margin-left: -10px;
-    margin-bottom: 0;
+    margin-left: 10px;
+    margin-bottom: 10px;
     padding-bottom: 0;
   }
 
