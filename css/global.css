@@ -589,11 +589,11 @@ body.no-scroll {
     flex-direction: column;
     height: auto;
     padding: 15px;
-    margin-top: 50px !important;
+    margin-top: 30px !important;
   }
 
   .page-content {
-    margin-top: 2rem !important;
+    margin-top: 1rem !important;
   }
 
   .mograph-sidebar {
