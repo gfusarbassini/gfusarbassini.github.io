@@ -18,17 +18,330 @@
             class="breadcrumb-active">/stories</span>
     </div>
 
-    <!-- CONTENT -->
+    <!-- CONTENT HEADER -->
     <div class="container">
         <div class="works-wrapper" style="width: 100%;">
             <div class="header initial-hidden" id="main-header">
                 <span>STORIES</span>
+                <div class="stories-tabs">
+                    <button class="stories-tab-btn active interactable" id="tab-social">SOCIAL & REELS</button>
+                    <button class="stories-tab-btn interactable" id="tab-docs">FILMS & DOCS</button>
+                </div>
                 <div class="burger" id="burger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </div>
 
-    <div class="mograph-container">
+    <!-- VIEW 1: SOCIAL & REELS -->
+    <div class="social-stories-container initial-hidden" id="social-view">
+
+        <!-- FEATURED: 200 DAYS TO GO (World Athletics Ultimate Championship) -->
+        <div class="featured-social-section">
+            <div class="featured-social-card">
+                <div class="featured-reel-box">
+                    <div class="reel-card interactable" data-reel-url="https://www.instagram.com/reel/DVGqZi-DIvM/embed">
+                        <img src="../media/wa-200days-cover.webp" class="reel-cover" alt="200 Days To Go">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH REEL</span>
+                            <div class="reel-badge">FEATURED</div>
+                            <p class="reel-title">200 DAYS TO GO</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="featured-social-info">
+                    <div class="featured-tag-group">
+                        <span class="tag interactable">World Athletics</span>
+                        <span class="tag interactable">Social Teaser</span>
+                        <span class="tag interactable">Motion Graphics</span>
+                        <span class="tag interactable">9:16 Vertical</span>
+                    </div>
+
+                    <h2 class="featured-social-title">THE ULTIMATE IS COMING<br>200 DAYS TO GO</h2>
+
+                    <p class="featured-social-desc">
+                        Official social campaign teaser produced for the inaugural World Athletics Ultimate Championship. 
+                        Dynamic pacing, rhythmic motion design, and sound-synced kinetic typography engineered to ignite anticipation and countdown to the championship.
+                    </p>
+
+                    <div class="featured-social-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">CLIENT</span>
+                            <span class="meta-val">World Athletics</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">ROLE</span>
+                            <span class="meta-val">Motion Design & Social Content</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">CHAMPIONSHIP</span>
+                            <span class="meta-val">Ultimate Athletics Championship</span>
+                        </div>
+                    </div>
+
+                    <div class="featured-social-actions">
+                        <button class="social-play-btn interactable" onclick="document.querySelector('.featured-reel-box .reel-card').click()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                            WATCH REEL
+                        </button>
+                        <a href="https://www.instagram.com/reel/DVGqZi-DIvM/" target="_blank" rel="noopener" class="social-external-link interactable">
+                            OPEN ON INSTAGRAM ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAROUSEL 1: AEON AGON (14 EPISODI) -->
+        <div class="social-carousel-section">
+            <div class="carousel-section-header">
+                <div class="carousel-header-left">
+                    <h3 class="carousel-section-title">AEON AGON · ARG QUEST</h3>
+                    <span class="carousel-section-subtitle">14-EPISODE INTERACTIVE SOCIAL CAMPAIGN</span>
+                </div>
+                <div class="carousel-nav-arrows">
+                    <button class="carousel-arrow-btn interactable" onclick="scrollCarousel(this, -1)" aria-label="Previous">‹</button>
+                    <button class="carousel-arrow-btn interactable" onclick="scrollCarousel(this, 1)" aria-label="Next">›</button>
+                </div>
+            </div>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-row social-carousel-row" id="aeonagon-carousel">
+                    <!-- Episode 1 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFC4IZbN1sG/embed">
+                        <img src="../media/aeonagon-ep-1.webp" class="reel-cover" alt="Episode 1">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 01</span>
+                            <p class="reel-title">What If?</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 2 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFC8wUVsdzC/embed">
+                        <img src="../media/aeonagon-ep-2.webp" class="reel-cover" alt="Episode 2">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 02</span>
+                            <p class="reel-title">Göteborg 🇸🇪</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 3 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFFc0XCtt4d/embed">
+                        <img src="../media/aeonagon-ep-3.webp" class="reel-cover" alt="Episode 3">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 03</span>
+                            <p class="reel-title">I am Agon</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 4 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFFdoxAN04n/embed">
+                        <img src="../media/aeonagon-ep-4.webp" class="reel-cover" alt="Episode 4">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 04</span>
+                            <p class="reel-title">Beijing 🇨🇳</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 5 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFIBonUNQ15/embed">
+                        <img src="../media/aeonagon-ep-5.webp" class="reel-cover" alt="Episode 5">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 05</span>
+                            <p class="reel-title">The Archive</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 6 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFICVOTNO6G/embed">
+                        <img src="../media/aeonagon-ep-6.webp" class="reel-cover" alt="Episode 6">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 06</span>
+                            <p class="reel-title">Cities 🌃</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 7 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFKmhi5CJAd/embed">
+                        <img src="../media/aeonagon-ep-7.webp" class="reel-cover" alt="Episode 7">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 07</span>
+                            <p class="reel-title">Time Travel ⏳</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 8 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFKnCWjKVm7/embed">
+                        <img src="../media/aeonagon-ep-8.webp" class="reel-cover" alt="Episode 8">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 08</span>
+                            <p class="reel-title">From the Past 🕰️</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 9 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFNLSSxK3XJ/embed">
+                        <img src="../media/aeonagon-ep-9.webp" class="reel-cover" alt="Episode 9">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 09</span>
+                            <p class="reel-title">A Better Look 👀</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 10 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFNL1COteZM/embed">
+                        <img src="../media/aeonagon-ep-10.webp" class="reel-cover" alt="Episode 10">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 10</span>
+                            <p class="reel-title">Interference ⚡</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 11 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFNMZhUMRgI/embed">
+                        <img src="../media/aeonagon-ep-11.webp" class="reel-cover" alt="Episode 11">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 11</span>
+                            <p class="reel-title">The Code 🔢</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 12 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFPwHN4gvdy/embed">
+                        <img src="../media/aeonagon-ep-12.webp" class="reel-cover" alt="Episode 12">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 12</span>
+                            <p class="reel-title">The Signal 📡</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 13 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DFSU2Z1BglT/embed">
+                        <img src="../media/aeonagon-ep-13.webp" class="reel-cover" alt="Episode 13">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 13</span>
+                            <p class="reel-title">Last Code 🗝️</p>
+                        </div>
+                    </div>
+
+                    <!-- Episode 14 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/reel/DFU5wRqPoWL/embed">
+                        <img src="../media/aeonagon-ep-14.webp" class="reel-cover" alt="Episode 14">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">EPISODE 14 · FINALE</span>
+                            <p class="reel-title">The Solution 🌌</p>
+                        </div>
+                    </div>
+
+                    <!-- Full Case Study Link Card -->
+                    <a href="../works/aeon-agon/" class="case-study-card interactable">
+                        <div class="case-study-inner">
+                            <span class="case-study-subtitle">WORLD ATHLETICS</span>
+                            <span class="case-study-title">FULL CASE STUDY</span>
+                            <p class="case-study-desc">Explore the ARG concept, branding, custom website & mechanics.</p>
+                            <span class="case-study-cta">EXPLORE ↗</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- CAROUSEL 2: LA CORSA CONTINUA (5 POST SOCIAL) -->
+        <div class="social-carousel-section">
+            <div class="carousel-section-header">
+                <div class="carousel-header-left">
+                    <h3 class="carousel-section-title">LA CORSA CONTINUA · SOCIAL SERIES</h3>
+                    <span class="carousel-section-subtitle">DOCUMENTARY COMPANION CLIPS & MOMENTS</span>
+                </div>
+                <div class="carousel-nav-arrows">
+                    <button class="carousel-arrow-btn interactable" onclick="scrollCarousel(this, -1)" aria-label="Previous">‹</button>
+                    <button class="carousel-arrow-btn interactable" onclick="scrollCarousel(this, 1)" aria-label="Next">›</button>
+                </div>
+            </div>
+
+            <div class="gallery-wrapper">
+                <div class="gallery-row social-carousel-row" id="corsa-carousel">
+                    <!-- Cut 1 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DOrJCEVDexa/embed">
+                        <img src="../media/corsa-continua-1.webp" class="reel-cover" alt="Part 1">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">SOCIAL CUT 01</span>
+                            <p class="reel-title">The Journey</p>
+                        </div>
+                    </div>
+
+                    <!-- Cut 2 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DO6YFFyjZHT/embed">
+                        <img src="../media/corsa-continua-2.webp" class="reel-cover" alt="Part 2">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">SOCIAL CUT 02</span>
+                            <p class="reel-title">The Preparation</p>
+                        </div>
+                    </div>
+
+                    <!-- Cut 3 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DPOIMNmDe1_/embed">
+                        <img src="../media/corsa-continua-3.webp" class="reel-cover" alt="Part 3">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">SOCIAL CUT 03</span>
+                            <p class="reel-title">Race Day</p>
+                        </div>
+                    </div>
+
+                    <!-- Cut 4 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DPehaIXDTdn/embed">
+                        <img src="../media/corsa-continua-4.webp" class="reel-cover" alt="Part 4">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">SOCIAL CUT 04</span>
+                            <p class="reel-title">Beyond The Limit</p>
+                        </div>
+                    </div>
+
+                    <!-- Cut 5 -->
+                    <div class="reel-card interactable social-card-item" data-reel-url="https://www.instagram.com/p/DQWpgCMjc4m/embed">
+                        <img src="../media/corsa-continua-5.webp" class="reel-cover" alt="Part 5">
+                        <div class="reel-overlay">
+                            <span class="play-prompt">WATCH</span>
+                            <span class="ep-badge">SOCIAL CUT 05</span>
+                            <p class="reel-title">The Heritage</p>
+                        </div>
+                    </div>
+
+                    <!-- Switch to Doc Card -->
+                    <div class="case-study-card interactable" onclick="document.getElementById('tab-docs').click()">
+                        <div class="case-study-inner">
+                            <span class="case-study-subtitle">REPORTAGE</span>
+                            <span class="case-study-title">FULL DOCUMENTARY</span>
+                            <p class="case-study-desc">Watch the complete short film in the Films & Docs player.</p>
+                            <span class="case-study-cta">WATCH FILM ↗</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- VIEW 2: FILMS & DOCS (ORIGINAL STORIES PLAYER) -->
+    <div class="mograph-container" id="docs-view" style="display: none;">
         <!-- Main Player -->
         <div class="mograph-main initial-hidden">
             <div class="main-player-wrapper">
@@ -94,9 +407,63 @@
         </div>
     </div>
 
+    <!-- RIGHT MENU PANEL -->
     <div class="right-menu-panel" id="menu-container"></div>
 
+    <!-- REEL MODAL -->
+    <div id="reelModal" class="modal">
+        <button id="reelModalClose" class="interactable">✕</button>
+        <button id="reelPrevBtn" class="modal-nav interactable">‹</button>
+        <button id="reelNextBtn" class="modal-nav interactable">›</button>
+        <div class="reel-embed-container">
+            <iframe id="reelFrame" src="" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+        </div>
+    </div>
+
     <script>
+        // === TABS & VIEW SWITCHER ===
+        const tabSocial = document.getElementById('tab-social');
+        const tabDocs = document.getElementById('tab-docs');
+        const socialView = document.getElementById('social-view');
+        const docsView = document.getElementById('docs-view');
+
+        function setTab(tab) {
+            if (tab === 'docs') {
+                tabDocs.classList.add('active');
+                tabSocial.classList.remove('active');
+                socialView.style.display = 'none';
+                docsView.style.display = 'flex';
+                history.replaceState(null, null, '#docs');
+            } else {
+                tabSocial.classList.add('active');
+                tabDocs.classList.remove('active');
+                socialView.style.display = 'block';
+                docsView.style.display = 'none';
+                history.replaceState(null, null, '#social');
+            }
+        }
+
+        tabSocial.addEventListener('click', () => setTab('social'));
+        tabDocs.addEventListener('click', () => setTab('docs'));
+
+        if (window.location.hash === '#docs') {
+            setTab('docs');
+        } else {
+            setTab('social');
+        }
+
+        // === CAROUSEL SCROLLER HELPER ===
+        window.scrollCarousel = (btn, dir) => {
+            const section = btn.closest('.social-carousel-section');
+            if (section) {
+                const row = section.querySelector('.gallery-row');
+                if (row) {
+                    row.scrollBy({ left: dir * 420, behavior: 'smooth' });
+                }
+            }
+        };
+
+        // === FILMS & DOCS SIDEBAR LOGIC ===
         document.addEventListener('DOMContentLoaded', () => {
             const sidebarItems = document.querySelectorAll('.sidebar-item');
             const mainVideo = document.getElementById('main-video-frame');
@@ -105,11 +472,9 @@
 
             sidebarItems.forEach(item => {
                 item.addEventListener('click', () => {
-                    // Update Active Class
                     sidebarItems.forEach(i => i.classList.remove('active'));
                     item.classList.add('active');
 
-                    // Update Main Player
                     const videoId = item.getAttribute('data-video-id');
                     const title = item.getAttribute('data-title');
                     const desc = item.getAttribute('data-desc');
@@ -118,7 +483,6 @@
                     mainTitle.innerText = title;
                     mainDesc.innerText = desc;
 
-                    // Scroll to top on mobile
                     if (window.innerWidth <= 1024) {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                     }
