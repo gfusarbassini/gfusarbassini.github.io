@@ -23,10 +23,7 @@
         <div class="works-wrapper" style="width: 100%;">
             <div class="header initial-hidden" id="main-header">
                 <span>STORIES</span>
-                <div class="stories-pills">
-                    <a href="#films" class="stories-pill-link interactable">FILMS &amp; DOCS</a>
-                    <a href="#social" class="stories-pill-link interactable">SOCIAL &amp; REELS</a>
-                </div>
+                
                 <div class="burger" id="burger"><span></span><span></span><span></span></div>
             </div>
         </div>
@@ -409,18 +406,7 @@
     </div>
 
     <script>
-        // === SMOOTH SCROLL PILLS ===
-        document.querySelectorAll('.stories-pill-link').forEach(link => {
-            link.addEventListener('click', (e) => {
-                const targetId = link.getAttribute('href');
-                const targetEl = document.querySelector(targetId);
-                if (targetEl) {
-                    e.preventDefault();
-                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    history.replaceState(null, null, targetId);
-                }
-            });
-        });
+        
 
         // === CAROUSEL SCROLLER HELPER ===
         window.scrollCarousel = (btn, dir) => {

@@ -2009,54 +2009,24 @@ a:visited {
 /* ============================================
    STORIES: SOCIAL & REELS EXPANSION (SEQUENTIAL VIEW)
    ============================================ */
-.stories-pills {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 24px;
-}
-
-.stories-pill-link {
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.28em;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  color: rgba(255, 255, 255, 0.65);
-  text-transform: uppercase;
-  padding: 6px 14px;
-  border-radius: 999px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  background: rgba(255, 255, 255, 0.04);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  line-height: 1.2;
-}
-
-.stories-pill-link:hover {
-  color: #fff;
-  border-color: #B180FF;
-  background: rgba(177, 128, 255, 0.12);
-  transform: translateY(-1px);
-}
-
 #films.mograph-container {
-  height: auto;
-  min-height: calc(100vh - 180px);
-  margin-bottom: 90px;
-  padding-bottom: 10px;
+  height: auto !important;
+  min-height: 0 !important;
+  margin-bottom: 30px;
+  padding-bottom: 0;
 }
 
 .social-stories-container {
   width: 100%;
-  margin-top: 10px;
-  padding: 0 150px 120px 30px;
+  margin-top: 0;
+  padding: 0 150px 100px 30px;
   box-sizing: border-box;
 }
 
 .social-section-title-wrap {
-  margin-bottom: 35px;
-  padding-top: 30px;
-  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 25px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .social-section-kicker {
@@ -2080,7 +2050,7 @@ a:visited {
 
 /* Featured Hero Section */
 .featured-social-section {
-  margin-bottom: 70px;
+  margin-bottom: 50px;
 }
 
 .featured-social-card {
@@ -2192,7 +2162,7 @@ a:visited {
 
 /* Carousel Section */
 .social-carousel-section {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .carousel-section-header {
@@ -2361,28 +2331,19 @@ a:visited {
 /* Responsive adjustments */
 @media (max-width: 1024px) {
   #films.mograph-container {
-    height: auto;
-    margin-bottom: 60px;
+    height: auto !important;
+    min-height: 0 !important;
+    margin-bottom: 30px;
     padding: 0 20px;
   }
 
   .social-stories-container {
     padding: 0 20px 80px;
-    margin-top: 10px;
+    margin-top: 0;
   }
 
   .social-section-headline {
     font-size: 3.2em;
-  }
-
-  .stories-pills {
-    margin-left: 10px;
-    gap: 6px;
-  }
-
-  .stories-pill-link {
-    padding: 4px 10px;
-    font-size: 0.25em;
   }
 
   .featured-social-card {
