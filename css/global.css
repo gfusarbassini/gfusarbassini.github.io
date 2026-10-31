@@ -1833,13 +1833,15 @@ img {
   width: 90%;
   max-width: 380px;
   /* Refined width for reels */
-  height: 85vh;
+  height: 88vh;
+  max-height: 760px;
   background: black;
-  border-radius: 24px;
+  border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 0 100px rgba(177, 128, 255, 0.4);
   position: relative;
   border: 1px solid rgba(255, 255, 255, 0.1);
+  transform: translateY(-40px); /* Spostata verso l'alto per evitare tagli in basso */
 }
 
 #reelFrame {
@@ -1896,9 +1898,21 @@ img {
 }
 
 @media (max-width: 1024px) {
+  #reelModal {
+    justify-content: flex-start;
+    padding-top: 55px;
+  }
+
   .reel-embed-container {
-    height: 70vh;
-    max-width: 320px;
+    height: 82vh;
+    max-height: 680px;
+    max-width: 350px;
+    transform: translateY(-15px);
+  }
+
+  #reelModalClose {
+    top: 15px;
+    right: 20px;
   }
 
   #reelModal .modal-nav {
