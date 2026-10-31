@@ -1993,57 +1993,75 @@ a:visited {
 }
 
 /* ============================================
-   STORIES: SOCIAL & REELS EXPANSION
+   STORIES: SOCIAL & REELS EXPANSION (SEQUENTIAL VIEW)
    ============================================ */
-.stories-header-wrapper {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.stories-tabs {
+.stories-pills {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  margin-left: 20px;
+  gap: 10px;
+  margin-left: 24px;
 }
 
-.stories-tab-btn {
+.stories-pill-link {
   font-family: 'Outfit', sans-serif;
-  font-size: 0.3em;
+  font-size: 0.28em;
   font-weight: 500;
   letter-spacing: 0.08em;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.65);
-  padding: 6px 16px;
-  border-radius: 999px;
-  cursor: pointer;
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  transition: all 0.3s ease;
+  text-decoration: none;
   line-height: 1.2;
 }
 
-.stories-tab-btn:hover {
+.stories-pill-link:hover {
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: #B180FF;
+  background: rgba(177, 128, 255, 0.12);
+  transform: translateY(-1px);
 }
 
-.stories-tab-btn.active {
-  color: #000;
-  background: #fff;
-  border-color: #fff;
-  font-weight: 700;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
+#films.mograph-container {
+  height: auto;
+  min-height: calc(100vh - 180px);
+  margin-bottom: 90px;
+  padding-bottom: 10px;
 }
 
 .social-stories-container {
   width: 100%;
-  margin-top: 130px;
-  padding: 0 22% 80px 30px;
+  margin-top: 10px;
+  padding: 0 150px 120px 30px;
   box-sizing: border-box;
+}
+
+.social-section-title-wrap {
+  margin-bottom: 35px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.social-section-kicker {
+  font-size: 0.75em;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  color: #B180FF;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.social-section-headline {
+  font-family: 'Six Caps', sans-serif;
+  font-size: 4.5em;
+  line-height: 0.85;
+  margin: 0;
+  color: white;
+  letter-spacing: 0.02em;
 }
 
 /* Featured Hero Section */
@@ -2094,23 +2112,9 @@ a:visited {
   z-index: 1;
 }
 
-.featured-tag-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.featured-tag-group .tag {
-  font-size: 0.75em;
-  padding: 4px 10px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  letter-spacing: 0.05em;
-}
-
 .featured-social-title {
   font-family: 'Six Caps', sans-serif;
-  font-size: 3.4em;
+  font-size: 3.6em;
   line-height: 0.95;
   margin: 0;
   color: white;
@@ -2120,45 +2124,18 @@ a:visited {
 .featured-social-desc {
   font-family: 'Outfit', sans-serif;
   font-weight: 300;
-  font-size: 1em;
+  font-size: 1.05em;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.82);
+  color: rgba(255, 255, 255, 0.85);
   margin: 0;
-  max-width: 700px;
-}
-
-.featured-social-meta {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  gap: 16px;
-  padding: 16px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.featured-social-meta .meta-item {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.featured-social-meta .meta-label {
-  font-size: 0.7em;
-  letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.4);
-}
-
-.featured-social-meta .meta-val {
-  font-size: 0.88em;
-  font-weight: 400;
-  color: rgba(255, 255, 255, 0.95);
+  max-width: 680px;
 }
 
 .featured-social-actions {
   display: flex;
   align-items: center;
   gap: 16px;
-  margin-top: 8px;
+  margin-top: 10px;
   flex-wrap: wrap;
 }
 
@@ -2369,13 +2346,29 @@ a:visited {
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
-  .social-stories-container {
-    padding: 0 20px 80px;
-    margin-top: 100px;
+  #films.mograph-container {
+    height: auto;
+    margin-bottom: 60px;
+    padding: 0 20px;
   }
 
-  .stories-tabs {
+  .social-stories-container {
+    padding: 0 20px 80px;
+    margin-top: 10px;
+  }
+
+  .social-section-headline {
+    font-size: 3.2em;
+  }
+
+  .stories-pills {
     margin-left: 10px;
+    gap: 6px;
+  }
+
+  .stories-pill-link {
+    padding: 4px 10px;
+    font-size: 0.25em;
   }
 
   .featured-social-card {

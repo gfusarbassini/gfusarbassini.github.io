@@ -18,22 +18,95 @@
             class="breadcrumb-active">/stories</span>
     </div>
 
-    <!-- CONTENT HEADER -->
+    <!-- HEADER WITH QUICK NAV PILLS -->
     <div class="container">
         <div class="works-wrapper" style="width: 100%;">
             <div class="header initial-hidden" id="main-header">
                 <span>STORIES</span>
-                <div class="stories-tabs">
-                    <button class="stories-tab-btn active interactable" id="tab-social">SOCIAL & REELS</button>
-                    <button class="stories-tab-btn interactable" id="tab-docs">FILMS & DOCS</button>
+                <div class="stories-pills">
+                    <a href="#films" class="stories-pill-link interactable">FILMS &amp; DOCS</a>
+                    <a href="#social" class="stories-pill-link interactable">SOCIAL &amp; REELS</a>
                 </div>
                 <div class="burger" id="burger"><span></span><span></span><span></span></div>
             </div>
         </div>
     </div>
 
-    <!-- VIEW 1: SOCIAL & REELS -->
-    <div class="social-stories-container initial-hidden" id="social-view">
+    <!-- SECTION 1: FILMS & DOCS (MAIN PLAYER & SIDEBAR) -->
+    <div class="mograph-container" id="films">
+        <!-- Main Player -->
+        <div class="mograph-main initial-hidden">
+            <div class="main-player-wrapper">
+                <div class="hover-video">
+                    <iframe id="main-video-frame" src="https://www.youtube.com/embed/ExDcXOzvRME"
+                        allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="main-video-info">
+                <h2 id="main-video-title" class="mograph-title">PALAZZO TASCA DE LEVA</h2>
+                <p id="main-video-desc" class="mograph-desc">Real Estate</p>
+            </div>
+        </div>
+
+        <!-- Sidebar List -->
+        <div class="mograph-sidebar initial-hidden">
+            <div class="sidebar-header">FILMS &amp; DOCS</div>
+            <div class="sidebar-list">
+                <!-- Project 0 -->
+                <div class="sidebar-item active interactable" data-video-id="ExDcXOzvRME" data-title="PALAZZO TASCA DE LEVA"
+                    data-desc="Real Estate">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/ExDcXOzvRME/mqdefault.jpg" alt="PALAZZO TASCA DE LEVA">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">PALAZZO TASCA DE LEVA</div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="sidebar-item interactable" data-video-id="n80N5bePRo0" data-title="KARIBU"
+                    data-desc="Short Documentary">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/n80N5bePRo0/mqdefault.jpg" alt="Karibu">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">KARIBU</div>
+                    </div>
+                </div>
+                
+                <!-- Project 1 -->
+                <div class="sidebar-item interactable" data-video-id="-GnccaetHos" data-title="LA CORSA CONTINUA"
+                    data-desc="Reportage">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/-GnccaetHos/mqdefault.jpg" alt="La corsa continua">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">LA CORSA CONTINUA</div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="sidebar-item interactable" data-video-id="fV7X00xupuw" data-title="PIQUED JACKS"
+                    data-desc="Interview at TEDxLungarnoMediceo 2023">
+                    <div class="sidebar-thumb">
+                        <img src="https://img.youtube.com/vi/fV7X00xupuw/mqdefault.jpg" alt="Piqued Jacks">
+                    </div>
+                    <div class="sidebar-info">
+                        <div class="sidebar-title">PIQUED JACKS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SECTION 2: SOCIAL & REELS (CONTINUES BELOW) -->
+    <div class="social-stories-container initial-hidden" id="social">
+
+        <!-- Section Intro -->
+        <div class="social-section-title-wrap">
+            <span class="social-section-kicker">SECTION II</span>
+            <h2 class="social-section-headline">SOCIAL &amp; REELS</h2>
+        </div>
 
         <!-- FEATURED: 200 DAYS TO GO (World Athletics Ultimate Championship) -->
         <div class="featured-social-section">
@@ -50,34 +123,16 @@
                 </div>
 
                 <div class="featured-social-info">
-                    <div class="featured-tag-group">
-                        <span class="tag interactable">World Athletics</span>
-                        <span class="tag interactable">Social Teaser</span>
-                        <span class="tag interactable">Motion Graphics</span>
-                        <span class="tag interactable">9:16 Vertical</span>
+                    <div class="client" style="margin-left: 0; color: #B180FF; letter-spacing: 0.15em; font-size: 0.85em; font-weight: 500;">
+                        WORLD ATHLETICS
                     </div>
 
                     <h2 class="featured-social-title">THE ULTIMATE IS COMING<br>200 DAYS TO GO</h2>
 
                     <p class="featured-social-desc">
                         Official social campaign teaser produced for the inaugural World Athletics Ultimate Championship. 
-                        Dynamic pacing, rhythmic motion design, and sound-synced kinetic typography engineered to ignite anticipation and countdown to the championship.
+                        Dynamic pacing, rhythmic motion design and sound-synced kinetic typography.
                     </p>
-
-                    <div class="featured-social-meta">
-                        <div class="meta-item">
-                            <span class="meta-label">CLIENT</span>
-                            <span class="meta-val">World Athletics</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">ROLE</span>
-                            <span class="meta-val">Motion Design & Social Content</span>
-                        </div>
-                        <div class="meta-item">
-                            <span class="meta-label">CHAMPIONSHIP</span>
-                            <span class="meta-val">Ultimate Athletics Championship</span>
-                        </div>
-                    </div>
 
                     <div class="featured-social-actions">
                         <button class="social-play-btn interactable" onclick="document.querySelector('.featured-reel-box .reel-card').click()">
@@ -326,85 +381,18 @@
                     </div>
 
                     <!-- Switch to Doc Card -->
-                    <div class="case-study-card interactable" onclick="document.getElementById('tab-docs').click()">
+                    <a href="#films" class="case-study-card interactable">
                         <div class="case-study-inner">
                             <span class="case-study-subtitle">REPORTAGE</span>
                             <span class="case-study-title">FULL DOCUMENTARY</span>
-                            <p class="case-study-desc">Watch the complete short film in the Films & Docs player.</p>
-                            <span class="case-study-cta">WATCH FILM ↗</span>
+                            <p class="case-study-desc">Watch the complete short film in Films & Docs above.</p>
+                            <span class="case-study-cta">WATCH FILM ↑</span>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>
 
-    </div>
-
-    <!-- VIEW 2: FILMS & DOCS (ORIGINAL STORIES PLAYER) -->
-    <div class="mograph-container" id="docs-view" style="display: none;">
-        <!-- Main Player -->
-        <div class="mograph-main initial-hidden">
-            <div class="main-player-wrapper">
-                <div class="hover-video">
-                    <iframe id="main-video-frame" src="https://www.youtube.com/embed/ExDcXOzvRME"
-                        allowfullscreen></iframe>
-                </div>
-            </div>
-            <div class="main-video-info">
-                <h2 id="main-video-title" class="mograph-title">PALAZZO TASCA DE LEVA</h2>
-                <p id="main-video-desc" class="mograph-desc">Real Estate</p>
-            </div>
-        </div>
-
-        <!-- Sidebar List -->
-        <div class="mograph-sidebar initial-hidden">
-            <div class="sidebar-header">ALL PROJECTS</div>
-            <div class="sidebar-list">
-                <!-- Project 0 -->
-                <div class="sidebar-item active interactable" data-video-id="ExDcXOzvRME" data-title="PALAZZO TASCA DE LEVA"
-                    data-desc="Real Estate">
-                    <div class="sidebar-thumb">
-                        <img src="https://img.youtube.com/vi/ExDcXOzvRME/mqdefault.jpg" alt="PALAZZO TASCA DE LEVA">
-                    </div>
-                    <div class="sidebar-info">
-                        <div class="sidebar-title">PALAZZO TASCA DE LEVA</div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="sidebar-item interactable" data-video-id="n80N5bePRo0" data-title="KARIBU"
-                    data-desc="Short Documentary">
-                    <div class="sidebar-thumb">
-                        <img src="https://img.youtube.com/vi/n80N5bePRo0/mqdefault.jpg" alt="Karibu">
-                    </div>
-                    <div class="sidebar-info">
-                        <div class="sidebar-title">KARIBU</div>
-                    </div>
-                </div>
-                
-                <!-- Project 1 -->
-                <div class="sidebar-item interactable" data-video-id="-GnccaetHos" data-title="LA CORSA CONTINUA"
-                    data-desc="Reportage">
-                    <div class="sidebar-thumb">
-                        <img src="https://img.youtube.com/vi/-GnccaetHos/mqdefault.jpg" alt="La corsa continua">
-                    </div>
-                    <div class="sidebar-info">
-                        <div class="sidebar-title">LA CORSA CONTINUA</div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="sidebar-item interactable" data-video-id="fV7X00xupuw" data-title="PIQUED JACKS"
-                    data-desc="Interview at TEDxLungarnoMediceo 2023">
-                    <div class="sidebar-thumb">
-                        <img src="https://img.youtube.com/vi/fV7X00xupuw/mqdefault.jpg" alt="Piqued Jacks">
-                    </div>
-                    <div class="sidebar-info">
-                        <div class="sidebar-title">PIQUED JACKS</div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- RIGHT MENU PANEL -->
@@ -421,36 +409,18 @@
     </div>
 
     <script>
-        // === TABS & VIEW SWITCHER ===
-        const tabSocial = document.getElementById('tab-social');
-        const tabDocs = document.getElementById('tab-docs');
-        const socialView = document.getElementById('social-view');
-        const docsView = document.getElementById('docs-view');
-
-        function setTab(tab) {
-            if (tab === 'docs') {
-                tabDocs.classList.add('active');
-                tabSocial.classList.remove('active');
-                socialView.style.display = 'none';
-                docsView.style.display = 'flex';
-                history.replaceState(null, null, '#docs');
-            } else {
-                tabSocial.classList.add('active');
-                tabDocs.classList.remove('active');
-                socialView.style.display = 'block';
-                docsView.style.display = 'none';
-                history.replaceState(null, null, '#social');
-            }
-        }
-
-        tabSocial.addEventListener('click', () => setTab('social'));
-        tabDocs.addEventListener('click', () => setTab('docs'));
-
-        if (window.location.hash === '#docs') {
-            setTab('docs');
-        } else {
-            setTab('social');
-        }
+        // === SMOOTH SCROLL PILLS ===
+        document.querySelectorAll('.stories-pill-link').forEach(link => {
+            link.addEventListener('click', (e) => {
+                const targetId = link.getAttribute('href');
+                const targetEl = document.querySelector(targetId);
+                if (targetEl) {
+                    e.preventDefault();
+                    targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    history.replaceState(null, null, targetId);
+                }
+            });
+        });
 
         // === CAROUSEL SCROLLER HELPER ===
         window.scrollCarousel = (btn, dir) => {
